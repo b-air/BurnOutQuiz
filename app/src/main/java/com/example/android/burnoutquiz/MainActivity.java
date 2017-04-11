@@ -348,7 +348,7 @@ public class MainActivity extends AppCompatActivity {
         }
         checkQ1 = (RadioButton) findViewById(Q1L2);
         if (checkQ1.isChecked()) {
-            burnOut += 1;
+            burnOut += 3;
         }
         checkQ1 = (RadioButton) findViewById(Q1L3);
         if (checkQ1.isChecked()) {
@@ -356,22 +356,22 @@ public class MainActivity extends AppCompatActivity {
         }
         checkQ1 = (RadioButton) findViewById(Q1L4);
         if (checkQ1.isChecked()) {
-            burnOut += 3;
+            burnOut += 1;
         }
 
         // Question 2
         // Radio Group
         RadioButton checkQ2 = (RadioButton) findViewById(Q2L1);
         if (checkQ2.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ2 = (RadioButton) findViewById(Q2L2);
         if (checkQ2.isChecked()) {
-            burnOut += 1;
+            burnOut += 2;
         }
         checkQ2 = (RadioButton) findViewById(Q2L3);
         if (checkQ2.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ2 = (RadioButton) findViewById(Q2L4);
         if (checkQ2.isChecked()) {
@@ -382,53 +382,53 @@ public class MainActivity extends AppCompatActivity {
         // Radio Group
         RadioButton checkQ3 = (RadioButton) findViewById(Q3L1);
         if (checkQ3.isChecked()) {
-            burnOut += 0;
+            burnOut += 2;
         }
         checkQ3 = (RadioButton) findViewById(Q3L2);
         if (checkQ3.isChecked()) {
-            burnOut += 1;
+            burnOut += 3;
         }
         checkQ3 = (RadioButton) findViewById(Q3L3);
         if (checkQ3.isChecked()) {
-            burnOut += 2;
+            burnOut += 1;
         }
         checkQ3 = (RadioButton) findViewById(Q3L4);
         if (checkQ3.isChecked()) {
-            burnOut += 3;
+            burnOut += 0;
         }
 
         // Question 4
         // Radio Group
         RadioButton checkQ4 = (RadioButton) findViewById(Q4L1);
         if (checkQ4.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ4 = (RadioButton) findViewById(Q4L2);
         if (checkQ4.isChecked()) {
-            burnOut += 1;
+            burnOut += 0;
         }
         checkQ4 = (RadioButton) findViewById(Q4L3);
         if (checkQ4.isChecked()) {
-            burnOut += 2;
+            burnOut += 3;
         }
         checkQ4 = (RadioButton) findViewById(Q4L4);
         if (checkQ4.isChecked()) {
-            burnOut += 3;
+            burnOut += 2;
         }
 
         // Question 5
         // Radio Group
         RadioButton checkQ5 = (RadioButton) findViewById(Q5L1);
         if (checkQ5.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ5 = (RadioButton) findViewById(Q5L2);
         if (checkQ5.isChecked()) {
-            burnOut += 1;
+            burnOut += 2;
         }
         checkQ5 = (RadioButton) findViewById(Q5L3);
         if (checkQ5.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ5 = (RadioButton) findViewById(Q5L4);
         if (checkQ5.isChecked()) {
@@ -439,34 +439,34 @@ public class MainActivity extends AppCompatActivity {
         // Radio Group
         RadioButton checkQ6 = (RadioButton) findViewById(Q6L1);
         if (checkQ6.isChecked()) {
-            burnOut += 0;
+            burnOut += 3;
         }
         checkQ6 = (RadioButton) findViewById(Q6L2);
         if (checkQ6.isChecked()) {
-            burnOut += 1;
+            burnOut += 2;
         }
         checkQ6 = (RadioButton) findViewById(Q6L3);
         if (checkQ6.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ6 = (RadioButton) findViewById(Q6L4);
         if (checkQ6.isChecked()) {
-            burnOut += 3;
+            burnOut += 1;
         }
 
         // Question 7
         // Radio Group
         RadioButton checkQ7 = (RadioButton) findViewById(Q7L1);
         if (checkQ7.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ7 = (RadioButton) findViewById(Q7L2);
         if (checkQ7.isChecked()) {
-            burnOut += 1;
+            burnOut += 2;
         }
         checkQ7 = (RadioButton) findViewById(Q7L3);
         if (checkQ7.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ7 = (RadioButton) findViewById(Q7L4);
         if (checkQ7.isChecked()) {
@@ -477,7 +477,7 @@ public class MainActivity extends AppCompatActivity {
         // Radio Group
         RadioButton checkQ8 = (RadioButton) findViewById(Q8L1);
         if (checkQ8.isChecked()) {
-            burnOut += 0;
+            burnOut += 3;
         }
         checkQ8 = (RadioButton) findViewById(Q8L2);
         if (checkQ8.isChecked()) {
@@ -489,90 +489,90 @@ public class MainActivity extends AppCompatActivity {
         }
         checkQ8 = (RadioButton) findViewById(Q8L4);
         if (checkQ8.isChecked()) {
-            burnOut += 3;
+            burnOut += 0;
         }
 
         // Question 9
         // Radio Group
         RadioButton checkQ9 = (RadioButton) findViewById(Q9L1);
         if (checkQ9.isChecked()) {
-            burnOut += 0;
+            burnOut += 2;
         }
         checkQ9 = (RadioButton) findViewById(Q9L2);
         if (checkQ9.isChecked()) {
-            burnOut += 1;
+            burnOut += 3;
         }
         checkQ9 = (RadioButton) findViewById(Q9L3);
         if (checkQ9.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ9 = (RadioButton) findViewById(Q9L4);
         if (checkQ9.isChecked()) {
-            burnOut += 3;
+            burnOut += 1;
         }
 
         // Question 10
         // Radio Group
         RadioButton checkQ10 = (RadioButton) findViewById(Q10L1);
         if (checkQ10.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ10 = (RadioButton) findViewById(Q10L2);
         if (checkQ10.isChecked()) {
-            burnOut += 1;
+            burnOut += 0;
         }
         checkQ10 = (RadioButton) findViewById(Q10L3);
         if (checkQ10.isChecked()) {
-            burnOut += 2;
+            burnOut += 3;
         }
         checkQ10 = (RadioButton) findViewById(Q10L4);
         if (checkQ10.isChecked()) {
-            burnOut += 3;
+            burnOut += 2;
         }
 
         // Question 11
         // Radio Group
         RadioButton checkQ11 = (RadioButton) findViewById(Q11L1);
         if (checkQ11.isChecked()) {
-            burnOut += 0;
+            burnOut += 2;
         }
         checkQ11 = (RadioButton) findViewById(Q11L2);
         if (checkQ11.isChecked()) {
-            burnOut += 1;
+            burnOut += 0;
         }
         checkQ11 = (RadioButton) findViewById(Q11L3);
         if (checkQ11.isChecked()) {
-            burnOut += 2;
+            burnOut += 3;
         }
         checkQ11 = (RadioButton) findViewById(Q11L4);
         if (checkQ11.isChecked()) {
-            burnOut += 3;
+            burnOut += 1;
         }
 
         // Question 12
         // Radio Group
         RadioButton checkQ12 = (RadioButton) findViewById(Q12L1);
         if (checkQ12.isChecked()) {
-            burnOut += 0;
+            burnOut += 3;
         }
         checkQ12 = (RadioButton) findViewById(Q12L2);
         if (checkQ12.isChecked()) {
-            burnOut += 1;
+            burnOut += 0;
         }
         checkQ12 = (RadioButton) findViewById(Q12L3);
         if (checkQ12.isChecked()) {
-            burnOut += 2;
+            burnOut += 1;
         }
         checkQ12 = (RadioButton) findViewById(Q12L4);
         if (checkQ12.isChecked()) {
-            burnOut += 3;
+            burnOut += 2;
         }
 
         // Question 13
         // Radio Group
         RadioButton checkQ13 = (RadioButton) findViewById(Q13L1);
         if (checkQ13.isChecked()) {
-            burnOut += 0;
+            burnOut += 3;
         }
         checkQ13 = (RadioButton) findViewById(Q13L2);
         if (checkQ13.isChecked()) {
@@ -580,26 +580,26 @@ public class MainActivity extends AppCompatActivity {
         }
         checkQ13 = (RadioButton) findViewById(Q13L3);
         if (checkQ13.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ13 = (RadioButton) findViewById(Q13L4);
         if (checkQ13.isChecked()) {
-            burnOut += 3;
+            burnOut += 2;
         }
 
         // Question 14
         // Radio Group
         RadioButton checkQ14 = (RadioButton) findViewById(Q14L1);
         if (checkQ14.isChecked()) {
-            burnOut += 0;
+            burnOut += 1;
         }
         checkQ14 = (RadioButton) findViewById(Q14L2);
         if (checkQ14.isChecked()) {
-            burnOut += 1;
+            burnOut += 2;
         }
         checkQ14 = (RadioButton) findViewById(Q14L3);
         if (checkQ14.isChecked()) {
-            burnOut += 2;
+            burnOut += 0;
         }
         checkQ14 = (RadioButton) findViewById(Q14L4);
         if (checkQ14.isChecked()) {
