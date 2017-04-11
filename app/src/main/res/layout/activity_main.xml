@@ -5,32 +5,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.android.burnoutquiz.MainActivity">
-//test
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/colorPrimaryDark"
+        android:background="@color/colorPrimary"
         android:orientation="vertical"
         android:padding="2dp"
         android:layout_margin="4dp">
 
-
+        <!-- WELCOME BOX-->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimary"
+            android:background="@color/colorAccent"
             android:orientation="vertical"
             android:padding="16dp"
-            android:layout_marginBottom="8dp"
+            android:layout_marginBottom="2dp"
             android:layout_marginLeft="2dp"
             android:layout_marginRight="2dp"
-            android:layout_marginTop="8dp">
+            android:layout_marginTop="2dp">
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Take the quiz"/>
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:text="Do you dare taking the quiz??"/>
 
 
             <LinearLayout
@@ -40,72 +43,103 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Line 1"/>
+                    android:layout_weight="1"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Burn Out :\nruin one's health or become completely exhausted through overwork."/>
+
+                <ImageView
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="0"
+                    android:src="@drawable/fire"/>
+
 
             </LinearLayout>
 
 
         </LinearLayout>
 
-
+        <!-- Name? box -->
         <LinearLayout
+            android:id="@+id/nameCase"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
+            android:background="@color/colorAccent"
             android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
+            android:padding="16dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="16dp">
 
-            <TextView
-                android:layout_width="wrap_content"
+            <EditText
+                android:id="@+id/nameField"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:text="Question 1"/>
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:hint="Name ?"/>
 
 
-            <LinearLayout
-                android:layout_width="wrap_content"
+            <CheckBox
+                android:id="@+id/checkAnonymous"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:text="Stay anonymous"
+                android:onClick="makeAnon"/>
+
+
+
+
+
+        </LinearLayout>
+
+        <!-- QUESTION 1 -->
+        <LinearLayout
+            style="@style/CaseLayout"
+            android:background="@color/colorPrimaryLight"
+            android:orientation="vertical">
+
             <TextView
+                style="@style/QuestionLayout"
+                android:text="1. How do you feel when you first wake up in the morning?"/>
+
+
+            <RadioGroup
+                android:id="@+id/myRadioGroup1"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Line 1"/>
+                android:layout_height="wrap_content">
+                <RadioButton
+                    android:id="@+id/Q1L1"
+                    style="@style/LineLayout"
+                    android:text="I'm ready to jump out of bed and eat a big bowl of cereal."/>
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/Q1L2"
+                    style="@style/LineLayout"
+                    android:text="I lie there exhausted, unable to move."/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/Q1L3"
+                    style="@style/LineLayout"
+                    android:text="I wonder to myself if I can make it through the day."/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
 
-            </LinearLayout>
+                <RadioButton
+                    android:id="@+id/Q1L4"
+                    style="@style/LineLayout"
+                    android:text="Nothing compares to C.S. Lewis and E.B. White"/>
 
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
+            </RadioGroup>
 
 
         </LinearLayout>
@@ -939,9 +973,12 @@
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:background="@color/colorAccent"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="16sp"
+        android:textStyle="bold"
         android:text="Send"
         android:padding="4dp"
-        android:layout_margin="8dp"/>
+        android:layout_margin="16dp"/>
 
     </LinearLayout>
 
