@@ -606,6 +606,7 @@ public class MainActivity extends AppCompatActivity {
             burnOut += 3;
         }
 
+
         return burnOut;
 
 
