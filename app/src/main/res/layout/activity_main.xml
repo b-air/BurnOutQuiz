@@ -11,8 +11,10 @@
         android:layout_height="match_parent"
         android:background="@color/colorPrimary"
         android:orientation="vertical"
-        android:padding="2dp"
+        android:padding="4dp"
         android:layout_margin="4dp">
+
+
 
         <!-- WELCOME BOX-->
         <LinearLayout
@@ -30,7 +32,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="8dp"
-                android:textColor="@color/colorPrimaryLight"
+                android:textColor="#FFFFFF"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:text="Do you dare taking the quiz??"/>
@@ -60,925 +62,659 @@
 
         </LinearLayout>
 
-        <!-- Name? box -->
-        <LinearLayout
-            android:id="@+id/nameCase"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorAccent"
-            android:orientation="vertical"
-            android:padding="16dp"
-            android:layout_marginBottom="16dp"
-            android:layout_marginLeft="2dp"
-            android:layout_marginRight="2dp"
-            android:layout_marginTop="16dp">
 
-            <EditText
-                android:id="@+id/nameField"
+        <!-- QUESTION LAYOUT-->
+        <LinearLayout
+            android:id="@+id/questionLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Name? box -->
+            <LinearLayout
+                android:id="@+id/nameCase"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_marginBottom="36dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="16dp">
+
+
+
+                <EditText
+                    android:id="@+id/nameField"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:maxLines="1"
+                    android:singleLine="true"
+                    android:hint="Name ?"/>
+
+
+                <CheckBox
+                    android:id="@+id/checkAnonymous"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryLight"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:text="Stay anonymous"
+                    android:onClick="makeAnon"/>
+
+
+
+
+
+            </LinearLayout>
+
+
+
+            <!-- QUESTION 1 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="1. How do you feel when you first wake up in the morning?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q1L1"
+                        style="@style/LineLayout"
+                        android:text="I'm ready to jump out of bed and eat a big bowl of cereal."/>
+
+                    <RadioButton
+                        android:id="@+id/Q1L2"
+                        style="@style/LineLayout"
+                        android:text="I lie there exhausted, unable to move."/>
+
+                    <RadioButton
+                        android:id="@+id/Q1L3"
+                        style="@style/LineLayout"
+                        android:text="I wonder to myself if I can make it through the day."/>
+
+                    <RadioButton
+                        android:id="@+id/Q1L4"
+                        style="@style/LineLayout"
+                        android:text="Nothing compares to C.S. Lewis and E.B. White"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 2 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="2. How frequently do friends or family members interrupt you while you're on the computer, phone, or tablet and ask when you're going to be off?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q2L1"
+                        style="@style/LineLayout"
+                        android:text="Only when deadlines are pressing or I'm working on a special project."/>
+
+                    <RadioButton
+                        android:id="@+id/Q2L2"
+                        style="@style/LineLayout"
+                        android:text="A lot. I hate it, but I have to keep in touch with what's going on."/>
+
+                    <RadioButton
+                        android:id="@+id/Q2L3"
+                        style="@style/LineLayout"
+                        android:text="Almost never. I don't use electronic devices except at work or when I'm alone."/>
+
+                    <RadioButton
+                        android:id="@+id/Q2L4"
+                        style="@style/LineLayout"
+                        android:text="Every day. If I miss a message or don't stay wired in, I'll be more swamped than ever."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 3 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="3. How do you feel about your performance at work or as a stay-home parent?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q3L1"
+                        style="@style/LineLayout"
+                        android:text="I feel like I'm just not on top of it anymore."/>
+
+                    <RadioButton
+                        android:id="@+id/Q3L2"
+                        style="@style/LineLayout"
+                        android:text="I find myself looking at others. And those others always seem to be doing a much better job than I I find myself looking at others. And those others always seem to be doing a much better job than I am."/>
+
+                    <RadioButton
+                        android:id="@+id/Q3L3"
+                        style="@style/LineLayout"
+                        android:text="I'm happy with how I'm doing. I mess up every now and then, but that's human."/>
+
+                    <RadioButton
+                        android:id="@+id/Q3L4"
+                        style="@style/LineLayout"
+                        android:text="I like how I'm handling even tough situations. I'm making effective decisions and feeling happy with the consequences."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 4 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="4. When your spouse or partner gives you a kiss—maybe as a sign to make love—or you take matters into your own hands, what happens?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q4L1"
+                        style="@style/LineLayout"
+                        android:text="My mind sometimes wanders, but after a few minutes I catch myself and enjoy it."/>
+
+                    <RadioButton
+                        android:id="@+id/Q4L2"
+                        style="@style/LineLayout"
+                        android:text="I relax into the experience."/>
+
+                    <RadioButton
+                        android:id="@+id/Q4L3"
+                        style="@style/LineLayout"
+                        android:text="I wish this person, whom I care about, would leave me alone. Or I think, 'I don't have time to indulge myself like this. I should stop.'"/>
+
+                    <RadioButton
+                        android:id="@+id/Q4L4"
+                        style="@style/LineLayout"
+                        android:text="I go through the motions, but sometimes I find myself thinking about work issues or even trivial things, like, 'Do I have enough nutmeg?'"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 5 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="5. When you're out for a walk, where does your mind go?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q5L1"
+                        style="@style/LineLayout"
+                        android:text="I get lost in daydreams about all the things I have to do."/>
+
+                    <RadioButton
+                        android:id="@+id/Q5L2"
+                        style="@style/LineLayout"
+                        android:text="I'm pretty drained. I have to order myself to keep moving and not quit."/>
+
+                    <RadioButton
+                        android:id="@+id/Q5L3"
+                        style="@style/LineLayout"
+                        android:text="I'm just happy to be outside. I sometimes even smile at people I don't know who are also out for the day."/>
+
+                    <RadioButton
+                        android:id="@+id/Q5L4"
+                        style="@style/LineLayout"
+                        android:text="I don't have time for walks anymore."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 6 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="6. If you got laid off due to something that wasn't your fault (budget cuts, an entire industry going kaput) and you could make it financially for the time being, what would you say to yourself—if only in secret?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q6L1"
+                        style="@style/LineLayout"
+                        android:text="Thank God! That place was too much pressure."/>
+
+                    <RadioButton
+                        android:id="@+id/Q6L2"
+                        style="@style/LineLayout"
+                        android:text="Say what they will, I'm just no good anymore and didn't make the cut."/>
+
+                    <RadioButton
+                        android:id="@+id/Q6L3"
+                        style="@style/LineLayout"
+                        android:text="I really love what I do. I'll just have to find another job—hopefully one that's even more rewarding."/>
+
+                    <RadioButton
+                        android:id="@+id/Q6L4"
+                        style="@style/LineLayout"
+                        android:text="What if I never find work again?"/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 7 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="7. What did you do last weekend?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q7L1"
+                        style="@style/LineLayout"
+                        android:text="I spent time with family or friends, did errands and shopping, straightened up the house; I felt really busy."/>
+
+                    <RadioButton
+                        android:id="@+id/Q7L2"
+                        style="@style/LineLayout"
+                        android:text="I worked from Friday to Sunday."/>
+
+                    <RadioButton
+                        android:id="@+id/Q7L3"
+                        style="@style/LineLayout"
+                        android:text="I took off at least one full day without doing either housework or work-work. I went to a party or other special event."/>
+
+                    <RadioButton
+                        android:id="@+id/Q7L4"
+                        style="@style/LineLayout"
+                        android:text="I stared at the walls, watched TV and hardly left the house."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 8 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="8. The last time a friend came to you upset or crying, you probably tried to make her feel better. But what did you really think inside?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q8L1"
+                        style="@style/LineLayout"
+                        android:text="I just didn't have time to deal with a big dramatic crisis."/>
+
+                    <RadioButton
+                        android:id="@+id/Q8L2"
+                        style="@style/LineLayout"
+                        android:text="I knew what to do—pat them on the back, say comforting things—and I did it. But I felt empty and distant."/>
+
+                    <RadioButton
+                        android:id="@+id/Q8L3"
+                        style="@style/LineLayout"
+                        android:text="I was sorry the person was sad, but I didn't have enough energy to give them the support they needed."/>
+
+                    <RadioButton
+                        android:id="@+id/Q8L4"
+                        style="@style/LineLayout"
+                        android:text="I was hopeful that my being there helped them."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 9 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="9. How's your physical health?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q9L1"
+                        style="@style/LineLayout"
+                        android:text="I'm tired all the time. I trudge through every minute."/>
+
+                    <RadioButton
+                        android:id="@+id/Q9L2"
+                        style="@style/LineLayout"
+                        android:text="I have a lot of aches and pains, colds, minor infections or stomach upsets."/>
+
+                    <RadioButton
+                        android:id="@+id/Q9L3"
+                        style="@style/LineLayout"
+                        android:text="I'm in great shape. I exercise a few times a weeks and rarely get sick."/>
+
+                    <RadioButton
+                        android:id="@+id/Q9L4"
+                        style="@style/LineLayout"
+                        android:text="I feel okay, but I know I need to work out more frequently and get more sleep."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 10 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="10. The last time someone sent you a gift, what did you think?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q10L1"
+                        style="@style/LineLayout"
+                        android:text="Great. Now I have to add 'write a thank-you note' to my to-do list."/>
+
+                    <RadioButton
+                        android:id="@+id/Q10L2"
+                        style="@style/LineLayout"
+                        android:text="Wow. How nice that somebody thought of me like this!"/>
+
+                    <RadioButton
+                        android:id="@+id/Q10L3"
+                        style="@style/LineLayout"
+                        android:text="Oh, what a lovely gift, but I have all this stuff to do, so I'll just put it someplace (closet, shelf, etc.) and enjoy it later when I have more time."/>
+
+                    <RadioButton
+                        android:id="@+id/Q10L4"
+                        style="@style/LineLayout"
+                        android:text="I wish had the energy to be more thoughtful to others."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 11 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="11. When you think about the life of your dreams, how close does your current life come?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q11L1"
+                        style="@style/LineLayout"
+                        android:text="I'm not doing what I want to do. Sometimes I think, 'Is this really my life?'"/>
+
+                    <RadioButton
+                        android:id="@+id/Q11L2"
+                        style="@style/LineLayout"
+                        android:text="I don't know exactly how it happened, but I'm doing the things I love."/>
+
+                    <RadioButton
+                        android:id="@+id/Q11L3"
+                        style="@style/LineLayout"
+                        android:text="Who thinks about that stuff? My life is what it is and I can't do much to change it."/>
+
+                    <RadioButton
+                        android:id="@+id/Q11L4"
+                        style="@style/LineLayout"
+                        android:text="I've had some detours, but I'm generally on the right track."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 12 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="12. What do you do to relax at night?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup12"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q12L1"
+                        style="@style/LineLayout"
+                        android:text="I have several glasses of wine, or take a pain pill, and flop on the sofa."/>
+
+                    <RadioButton
+                        android:id="@+id/Q12L2"
+                        style="@style/LineLayout"
+                        android:text="I work out, read a novel, listen to music or just hang out with my friends and family."/>
+
+                    <RadioButton
+                        android:id="@+id/Q12L3"
+                        style="@style/LineLayout"
+                        android:text="I try to relax, but it just doesn't work."/>
+
+                    <RadioButton
+                        android:id="@+id/Q12L4"
+                        style="@style/LineLayout"
+                        android:text="I zone out—watch TV or surf the web—so I don't have to think."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 13 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="13. How often do you see the dentist, doctor or hair stylist?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup13"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q13L1"
+                        style="@style/LineLayout"
+                        android:text="I don't. I just don't have time. That stuff will have to wait."/>
+
+                    <RadioButton
+                        android:id="@+id/Q13L2"
+                        style="@style/LineLayout"
+                        android:text="I go, but less often than I should."/>
+
+                    <RadioButton
+                        android:id="@+id/Q13L3"
+                        style="@style/LineLayout"
+                        android:text="I make an appointment whenever I need a cut or I'm due for a visit. I'd rather have a checkup than worry about more problems later."/>
+
+                    <RadioButton
+                        android:id="@+id/Q13L4"
+                        style="@style/LineLayout"
+                        android:text="I make the appointments, but I get so busy, I end up skipping them and rescheduling, over and over."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <!-- QUESTION 14 -->
+            <LinearLayout
+                style="@style/CaseLayout"
+                android:background="@color/colorPrimaryLight"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/QuestionLayout"
+                    android:text="14. Right before you fall asleep, what are you usually thinking about?"/>
+
+                <RadioGroup
+                    android:id="@+id/myRadioGroup14"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/Q14L1"
+                        style="@style/LineLayout"
+                        android:text="What I did and didn't do today—and what I have to do tomorrow."/>
+
+                    <RadioButton
+                        android:id="@+id/Q14L2"
+                        style="@style/LineLayout"
+                        android:text="How tired and overwhelmed I feel."/>
+
+                    <RadioButton
+                        android:id="@+id/Q14L3"
+                        style="@style/LineLayout"
+                        android:text="What went right today, what I'm grateful for, what I'd like to try to do tomorrow or in the future."/>
+
+                    <RadioButton
+                        android:id="@+id/Q14L4"
+                        style="@style/LineLayout"
+                        android:text="Everything from money issues to problems in my relationships."/>
+
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+
+
+            <!-- burnOutTest button -->
+
+            <TextView
+                android:id="@+id/submitTest"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:background="@color/colorAccent"
                 android:textColor="@color/colorPrimaryLight"
                 android:textSize="20sp"
                 android:textStyle="bold"
-                android:maxLines="1"
-                android:singleLine="true"
-                android:hint="Name ?"/>
-
-
-            <CheckBox
-                android:id="@+id/checkAnonymous"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/colorPrimaryLight"
-                android:textSize="16sp"
-                android:textStyle="bold"
-                android:text="Stay anonymous"
-                android:onClick="makeAnon"/>
-
-
-
-
+                android:padding="4dp"
+                android:layout_margin="16dp"
+                android:text="Send"
+                android:onClick="submitTest"/>
 
         </LinearLayout>
 
-        <!-- QUESTION 1 -->
+
+        <!-- ANSWER LAYOUT -->
+
         <LinearLayout
-            style="@style/CaseLayout"
-            android:background="@color/colorPrimaryLight"
+            android:id="@+id/answerLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <TextView
-                style="@style/QuestionLayout"
-                android:text="1. How do you feel when you first wake up in the morning?"/>
-
-
-            <RadioGroup
-                android:id="@+id/myRadioGroup1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content">
-                <RadioButton
-                    android:id="@+id/Q1L1"
-                    style="@style/LineLayout"
-                    android:text="I'm ready to jump out of bed and eat a big bowl of cereal."/>
-
-                <RadioButton
-                    android:id="@+id/Q1L2"
-                    style="@style/LineLayout"
-                    android:text="I lie there exhausted, unable to move."/>
-
-
-                <RadioButton
-                    android:id="@+id/Q1L3"
-                    style="@style/LineLayout"
-                    android:text="I wonder to myself if I can make it through the day."/>
-
-
-                <RadioButton
-                    android:id="@+id/Q1L4"
-                    style="@style/LineLayout"
-                    android:text="Nothing compares to C.S. Lewis and E.B. White"/>
-
-            </RadioGroup>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
+                style="@style/AnswerLayout"
+                android:id="@+id/nameResult"
+                android:text="Name"/>
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 2"/>
+                style="@style/AnswerLayout"
+                android:id="@+id/diags"
+                android:text="Result"/>
 
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
 
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 3"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
+                android:id="@+id/submitRetry"
+                android:layout_width="match_parent"
+                android:layout_height="75dp"
+                android:gravity="center"
+                android:background="@color/colorAccent"
+                android:textColor="@color/colorPrimaryLight"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:layout_margin="16dp"
+                android:text="Retry"
+                android:onClick="submitRetry"/>
 
         </LinearLayout>
 
 
-        <LinearLayout
+        <!-- DISCLAIMER -->
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
+            android:layout_height="wrap_content"
+            android:layout_margin="16dp"
+            android:textSize="10dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:text="The Content is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always seek the advice of your physician or other qualified health provider with any questions you may have regarding a medical condition. Never disregard professional medical advice or delay in seeking it because of something you have read on this App."/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 4"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 5"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 6"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 7"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 8"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 9"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 10"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 11"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 12"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 13"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/colorPrimaryLight"
-            android:orientation="vertical"
-            android:padding="4dp"
-            android:layout_margin="2dp">
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:text="Question 14"/>
-
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 1"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 2"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 3"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Line 4"/>
-
-            </LinearLayout>
-
-
-        </LinearLayout>
-
-
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:background="@color/colorAccent"
-        android:textColor="@color/colorPrimaryLight"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:text="Send"
-        android:padding="4dp"
-        android:layout_margin="16dp"/>
 
     </LinearLayout>
 

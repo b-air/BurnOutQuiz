@@ -11,6 +11,7 @@
     <style name="QuestionLayout" parent="@style/AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
         <item name="android:layout_marginBottom">8dp</item>
         <item name="android:background">@color/colorPrimaryLight</item>
         <item name="android:textStyle">bold</item>
@@ -18,18 +19,31 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="AnswerLayout" parent="@style/AppTheme">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:padding">4dp</item>
+        <item name="android:layout_marginBottom">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/colorPrimaryLight</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
     <style name="CaseLayout" parent="@style/AppTheme">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textColor">@color/colorAccent</item>
-        <item name="android:layout_margin">2dp</item>
+        <item name="android:layout_margin">8dp</item>
         <item name="android:padding">4dp</item>
     </style>
 
     <style name="LineLayout" parent="@style/AppTheme">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
-        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:gravity">fill</item>
+        <item name="android:textSize">14sp</item>
     </style>
 
 </resources>
